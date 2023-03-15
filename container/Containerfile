@@ -1,0 +1,5 @@
+FROM ubuntu:22.04
+
+COPY ./heartbeat.sh /usr/sbin/heartbeat.sh
+
+ENTRYPOINT ["sh", "/usr/sbin/heartbeat.sh"]
