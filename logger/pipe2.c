@@ -23,7 +23,7 @@ int main()
 
     else if (cpid == 0) {
         close(fd[1]);
-        if (dup2(fd[0], 0)) {
+        if (dup2(fd[0], STDIN_FILENO)) {
             perror("dup2");
             exit(EXIT_FAILURE);
         }

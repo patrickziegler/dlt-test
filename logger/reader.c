@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
         strcpy(prefix, argv[2]);
     }
     char input[BUF_SIZE] = "";
-    read(0, input, BUF_SIZE);
+    read(STDIN_FILENO, input, BUF_SIZE);
     printf("%s: %s", prefix, input);
     exit(EXIT_SUCCESS);
 }

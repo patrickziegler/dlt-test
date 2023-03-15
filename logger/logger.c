@@ -23,7 +23,7 @@ int main()
 
     else if (cpid == 0) {
         close(fd[1]);
-        if (dup2(fd[0], 0)) {
+        if (dup2(fd[0], STDIN_FILENO)) {
             perror("dup2");
             exit(EXIT_FAILURE);
         }
@@ -32,7 +32,7 @@ int main()
             "-a", "test",
             "-c", "test",
             NULL};
-        close(1); // suppress stdout
+        close(STDOUT_FILENO); // suppress dlt-adaptor-stdin output
         execv(args[0], args);
         perror("execve");
         exit(EXIT_FAILURE);
