@@ -1,3 +1,13 @@
+/* Copyright (C) 2023 Patrick Ziegler
+ *
+ * This programm reads a line from stdin,
+ * prefixes it with a configurable string
+ * and prints the result to stdout
+ *
+ * Usage:
+ * echo "ok" | ./reader -p test
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

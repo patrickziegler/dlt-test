@@ -1,3 +1,11 @@
+/* Copyright (C) 2023 Patrick Ziegler
+ *
+ * This programm is implementing the following
+ * shell command in plain C
+ *
+ * echo "ok" | ./reader -p test
+ */
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
